@@ -1,0 +1,25 @@
+[global]
+	origin = top-center
+	offset = 30x0
+	scale = 1
+	corner_radius = 10
+	icon_corner_radius = 10
+	transparency = 0
+	padding = 10
+	text_icon_padding = 10
+	frame_width = 2
+	width = (0, 300)
+	
+	frame_color = "#ffffff"
+	background = "#ffffff"
+	foreground = "#484b64"	
+
+	gap_size = 5
+	font = Inter 9
+	line_height = 3
+	format = "%a\n<b>%s</b>\n%b"
+	alignment = left
+	vertical_alignment = center
+	
+	progress_bar = true
+	icon_path = /usr/share/icons/Adwaita/32x32/status/:/usr/share/icons/Adwaita/32x32/devices/:/usr/share/icons/Adwaita/32x32/legacy/:/usr/share/icons/Adwaita/32x32/emblems

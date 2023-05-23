@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# Toggle mute and display the current state as a notification
+
+notification_icon_on=audio-volume-high-symbolic.symbolic
+notification_icon_off=audio-volume-muted-symbolic.symbolic
+notification_miliseconds=3000
+notification_id=11
+
+pactl set-sink-mute @DEFAULT_SINK@ toggle
+state=$(pactl get-sink-mute @DEFAULT_SINK@)
+
+if [[ $state =~ "yes" ]]; then
+    notification_icon="$notification_icon_off"
+    notification_body="muted"
+else
+    notification_icon="$notification_icon_on"
+    notification_body="unmuted"
+fi
+
+dunstify \
+    -a "volume" "$notification_body" \
+    -u low \
+    -t "$notification_miliseconds" \
+    -i "$notification_icon" \
+    -r "$notification_id"

@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# Control brightness and display the current value as a notification
+
+help="Usage: $(basename $0) [0-100]%[+|-]"
+pattern='^[0-9]{1,2}%[+-]$'
+notification_icon=display-brightness-symbolic.symbolic
+notification_miliseconds=3000
+notification_id=10
+
+if [[ "$#" -ne 1 ]]; then
+    echo "$help" >&2
+    exit 1
+fi
+
+if [[ "$1" =~ $pattern ]]; then
+    dunstify \
+        -a "brightness" "$(brightnessctl set "$1" | grep -oE '([0-9]*%)')" \
+        -u low \
+        -t "$notification_miliseconds" \
+        -i "$notification_icon" \
+        -r "$notification_id"
+else
+    echo "$help" >&2
+    exit 1
+fi

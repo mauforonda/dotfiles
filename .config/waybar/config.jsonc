@@ -1,0 +1,51 @@
+{
+	"layer": "top",
+	"position": "top",
+	"modules-center": ["wlr/workspaces"],
+	"modules-right": ["clock", "battery"],
+
+	"wlr/workspaces": {
+		"disable-scroll": true,
+		"on-click": "activate",
+		"format": "{icon}",
+		"format-icons": {
+			"default": "",
+			"1": "",
+			"2": "",
+			"3": "",
+			"4": "",
+			"5": "",
+			"active": "",
+			"urgent": ""
+		},
+		"persistent_workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": []
+		}
+	},
+	
+	"clock": {
+		"format": "{:%H:%M}",
+		"tooltip": true,
+		"tooltip-format": "{:%B %d, %Y}"
+	},
+
+	"battery": {
+		"format": "{icon}",
+		"full-at": 95,
+		"format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀","󰂁", "󰂂","󰁹"],
+		"tooltip": true,
+		"tooltip-format": "{capacity}%",
+		"tooltip-format-discharging": "%{capacity}\ndischarging",
+		"tooltip-format-charging": "%{capacity}\ncharging",
+		"states": {
+			"full": 100,
+			"warning": 50,
+			"critical": 15
+		}
+	}
+
+}

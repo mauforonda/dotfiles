@@ -1,0 +1,96 @@
+/* Bar */
+
+* {
+	font-family: "Inter";
+	font-size: 11px;
+}
+
+window#waybar {
+	background-color: transparent;
+}
+
+/* Tooltips */
+
+tooltip {
+	background: #f7f7f9; 
+	padding: 0px;
+	border: 1px solid rgba(140,149,159,0.2);
+	border-radius: 20px;
+	box-shadow: 0 1px 3px rgba(140,149,159,0.1);
+	margin: 15px;
+}
+
+tooltip label {
+	background: #f7f7f9;
+	text-shadow: none;
+	color: #94949f;
+	font-weight: bold;
+	padding: 0px 5px;
+}
+
+/* Buttons */
+
+@keyframes button_activate {
+	from { opacity: .3 }
+	to { opacity: 1.; }
+}
+
+#workspaces button.active {
+	color: #6282de;
+	background: radial-gradient(circle, rgba(25, 79, 255, 0.3) 20%, rgba(132,129,156,0) 30%);
+	animation: button_activate .2s ease-in-out;
+}
+
+#workspaces button.urgent {
+	color: #194fff;	
+	background: radial-gradient(circle, rgba(25, 79, 255, 0.8) 25%, rgba(132,129,156,0) 33%);
+}
+
+#workspaces button.persistent {
+	color: rgba(128, 142, 194, 0.3);
+}
+
+#workspaces button {
+	border: none;
+	color: #98a8d6;
+	padding: 3px;
+}
+
+#workspaces button:hover, #workspaces button.active:hover{
+	border-radius: 0;
+	border: none;
+	box-shadow: inherit;
+	background: radial-gradient(circle, rgba(25, 79, 255, 0.1) 25%, rgba(132,129,156,0) 33%);
+}
+
+#workspaces button.active:hover, #workspaces button.urgent:hover {
+	background: inherit;
+}
+
+/* Indicators */
+
+#battery, #clock {
+	color: #f7f7f9;
+	font-weight: bold;
+	background: rgba(128, 142, 194, 0.3);
+}
+
+#clock {
+	padding: 0px 5px 0 12px;
+	border-radius: 0% 0% 0% 15%;
+}
+
+#battery {
+	padding: 0px 12px 0 5px;
+	border-radius: 0%;
+	margin-right: 0px;
+}
+
+#battery.warning {
+	color: #194fff;
+}
+
+#battery.critical {
+	color: #e0589a;
+}
+

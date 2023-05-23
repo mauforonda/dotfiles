@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# Control volume and display the current value as a notification
+
+help="Usage: $(basename $0) [+|-][0-100]%"
+pattern='^[+-][0-9]{1,2}%$'
+notification_icon=audio-volume-high-symbolic.symbolic
+notification_miliseconds=3000
+notification_id=11
+
+if [[ "$#" -ne 1 ]]; then
+    echo "$help" >&2
+    exit 1
+fi
+
+if [[ "$1" =~ $pattern ]]; then
+    pactl set-sink-volume @DEFAULT_SINK@ "$1"
+    dunstify \
+        -a "volume" "$(pactl get-sink-volume @DEFAULT_SINK@ | grep -Eo '[0-9]{1,3}%' | head -1)" \
+        -u low \
+        -t "$notification_miliseconds" \
+        -i "$notification_icon" \
+        -r "$notification_id"
+else
+    echo "$help" >&2
+    exit 1
+fi
