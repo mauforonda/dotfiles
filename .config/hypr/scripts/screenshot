@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# Toggle mute and display the current state as a notification
+
+notification_icon=camera-photo-symbolic.symbolic
+notification_miliseconds=3000
+notification_id=12
+
+shot_path=$(xdg-user-dir PICTURES)/$(date +'%Y%m%d_%H%M_grim.png')
+grim "$shot_path"
+
+ACTION=$(dunstify \
+    -a "grim" "shot" \
+    -A "open_action,Open" \
+    -u low \
+    -t "$notification_miliseconds" \
+    -i "$notification_icon" \
+    -r "$notification_id")
+
+if [[ $ACTION == 'open_action' ]]; then
+    chromium $shot_path
+fi

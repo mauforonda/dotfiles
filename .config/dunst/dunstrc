@@ -23,3 +23,6 @@
 	
 	progress_bar = true
 	icon_path = /usr/share/icons/Adwaita/32x32/status/:/usr/share/icons/Adwaita/32x32/devices/:/usr/share/icons/Adwaita/32x32/legacy/:/usr/share/icons/Adwaita/32x32/emblems
+	
+	show_indicators = no
+	mouse_left_click = do_action
