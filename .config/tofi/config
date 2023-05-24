@@ -25,7 +25,7 @@ prompt-padding = 0
 background-color = #b9babd00
 text-color = #f7f7f9
 
-default-result-background = #BEC6DB
+default-result-background = #B4B8CA
 default-result-background-padding = 4, 8
 default-result-background-corner-radius = 3
 
