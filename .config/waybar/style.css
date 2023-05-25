@@ -37,7 +37,7 @@ tooltip label {
 
 #workspaces button {
 	border: none;
-	color: #98a8d6;
+	color: #6282de;
 	padding: 3px;
 	background: transparent;
 	box-shadow: none;
@@ -70,9 +70,11 @@ tooltip label {
 /* Indicators */
 
 #battery, #clock {
-	color: #f7f7f9;
+	/* color: #f7f7f9; */
 	font-weight: bold;
-	background: rgba(128, 142, 194, 0.3);
+	/* color: rgba(128, 142, 194, 0.8); */
+	color: #79829d;
+	background-color: transparent;
 }
 
 #clock {

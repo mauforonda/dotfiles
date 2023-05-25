@@ -11,7 +11,7 @@ height = 33
 outline-width = 0
 border-width = 0
 min-input-width = 0
-result-spacing = 20
+result-spacing = 25
 
 hide-input = true
 
@@ -22,17 +22,17 @@ padding-right = 0
 
 prompt-text = ""
 prompt-padding = 0
-background-color = #b9babd00
-text-color = #f7f7f9
+background-color = #D0D0D2
+text-color = #79829d
 
-default-result-background = #B4B8CA
-default-result-background-padding = 4, 8
-default-result-background-corner-radius = 3
+default-result-background = #CBCACD
+default-result-background-padding = 5, 10
+default-result-background-corner-radius = 12
 
-selection-color = #f7f7f9
-selection-background = #6282de
-selection-background-padding = 4, 8
-selection-background-corner-radius = 3
-selection-match-color = #fff
+selection-color = #79829d
+selection-background = #dbdbdb
+selection-background-padding = 5, 10
+selection-background-corner-radius = 12
+selection-match-color = #656d85
 
 clip-to-padding = false
