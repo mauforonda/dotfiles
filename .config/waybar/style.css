@@ -37,21 +37,21 @@ tooltip label {
 
 #workspaces button {
 	border: none;
-	color: #6282de;
+	color:  #79829d;
 	padding: 3px;
 	background: transparent;
 	box-shadow: none;
 }
 
 #workspaces button.active {
-	color: #6282de;
-	background: radial-gradient(circle, rgba(25, 79, 255, 0.3) 20%, rgba(132,129,156,0) 30%);
+	color:  #53586c;
+	background: radial-gradient(circle, rgba(20, 48, 187, 0.699) 5%, rgba(36, 39, 54, 0.5) 18%, rgba(132,129,156,0) 23%, rgba(70, 76, 98, 0.201) 24%, rgba(132,129,156,0) 30%);
 	animation: button_activate .2s ease-in-out;
 }
 
 #workspaces button.urgent {
 	color: #194fff;	
-	background: radial-gradient(circle, rgba(25, 79, 255, 0.8) 25%, rgba(132,129,156,0) 33%);
+	background: radial-gradient(circle, rgba(25, 79, 255, 0.3) 20%, rgba(132,129,156,0) 30%);
 }
 
 #workspaces button.persistent {
@@ -69,7 +69,7 @@ tooltip label {
 
 /* Indicators */
 
-#battery, #clock {
+#battery, #clock, #network {
 	/* color: #f7f7f9; */
 	font-weight: bold;
 	/* color: rgba(128, 142, 194, 0.8); */
@@ -80,6 +80,10 @@ tooltip label {
 #clock {
 	padding: 0px 5px 0 12px;
 	border-radius: 0% 0% 0% 15%;
+}
+
+#network {
+	padding: 0px 5px 0px 0px;
 }
 
 #battery {

@@ -2,12 +2,23 @@
 
 # Toggle mute and display the current state as a notification
 
+help="Usage: $(basename $0) [region]"
 notification_icon=camera-photo-symbolic.symbolic
 notification_miliseconds=3000
 notification_id=12
 
-shot_path=$(xdg-user-dir PICTURES)/$(date +'%Y%m%d_%H%M_grim.png')
-grim "$shot_path"
+directory=$(xdg-user-dir PICTURES)
+
+if [[ "$#" -ne 1 ]]; then
+    shot_path="$directory/$(date +'%Y%m%d_%H%M_grim.png')"
+    grim "$shot_path"
+elif [[ $1 == "region" ]]; then
+    shot_path="$directory/$(date +'%Y%m%d_%H%M_grim_region.png')"
+    grim -g "$(slurp)" "$shot_path"
+else
+    echo "$help" >&2
+    exit 1
+fi
 
 ACTION=$(dunstify \
     -a "grim" "shot" \

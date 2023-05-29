@@ -2,7 +2,7 @@
 	"layer": "top",
 	"position": "top",
 	"modules-center": ["wlr/workspaces"],
-	"modules-right": ["clock", "battery"],
+	"modules-right": ["clock", "network", "battery"],
 
 	"wlr/workspaces": {
 		"disable-scroll": true,
@@ -15,8 +15,8 @@
 			"3": "",
 			"4": "",
 			"5": "",
-			"active": "",
-			"urgent": ""
+			"active": "",
+			"urgent": ""
 		},
 		"persistent_workspaces": {
 			"1": [],
@@ -31,6 +31,15 @@
 		"format": "{:%H:%M}",
 		"tooltip": true,
 		"tooltip-format": "{:%B %d, %Y}"
+	},
+
+	"network": {
+		"format": "{icon}",
+		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+		"format-disconnected": "",
+		"tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+		"tooltip-format-ethernet": "{ifname} ",
+		"tooltip-format-disconnected": "Disconnected"
 	},
 
 	"battery": {
