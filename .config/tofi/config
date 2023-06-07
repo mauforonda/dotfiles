@@ -3,10 +3,10 @@ font-size = 9
 font-variations = "wght 500"
 
 horizontal = true
-anchor = top-left
+anchor = bottom-left
 margin-left = 0
 width = 30%
-height = 33
+height = 39
 
 outline-width = 0
 border-width = 0
@@ -22,14 +22,14 @@ padding-right = 0
 
 prompt-text = ""
 prompt-padding = 0
-background-color = #D0D0D2
-text-color = #79829d
+background-color = #D0D0D200
+text-color = #ececf1
 
-default-result-background = #CBCACD
+default-result-background = #A6ACB6
 default-result-background-padding = 5, 10
 default-result-background-corner-radius = 12
 
-selection-color = #79829d
+selection-color = #53586c
 selection-background = #dbdbdb
 selection-background-padding = 5, 10
 selection-background-corner-radius = 12

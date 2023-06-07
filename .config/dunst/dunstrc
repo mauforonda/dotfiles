@@ -1,6 +1,6 @@
 [global]
 	origin = top-center
-	offset = 30x0
+	offset = 30x10
 	scale = 1
 	corner_radius = 10
 	icon_corner_radius = 10

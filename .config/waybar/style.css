@@ -12,18 +12,21 @@ window#waybar {
 /* Tooltips */
 
 tooltip {
-	background: #f7f7f9; 
+	/* background: #f7f7f9;  */
+	background: rgba(242, 244, 247, 0.9);
 	padding: 0px;
-	border: 1px solid rgba(140,149,159,0.2);
+	border: 1px solid rgba(168, 176, 185, 0.1);
 	border-radius: 20px;
 	box-shadow: 0 1px 3px rgba(140,149,159,0.1);
-	margin: 15px;
+	margin: 0px;
 }
 
 tooltip label {
-	background: #f7f7f9;
+	/* background: #f7f7f9; */
 	text-shadow: none;
 	color: #94949f;
+	/* color: #53586c; */
+	/* color: #f9f9f9; */
 	font-weight: bold;
 	padding: 0px 5px;
 }
@@ -31,31 +34,41 @@ tooltip label {
 /* Buttons */
 
 @keyframes button_activate {
-	from { opacity: .3 }
+	from { opacity: .1 }
 	to { opacity: 1.; }
+}
+
+#workspaces {
+	background: rgba(219, 219, 219, .5);
+	padding: 0px 5px;
+	border-radius: 25px;
 }
 
 #workspaces button {
 	border: none;
-	color:  #79829d;
+	/* color:  #79829d; */
+	color:  #ececf1;
 	padding: 3px;
 	background: transparent;
 	box-shadow: none;
 }
 
 #workspaces button.active {
-	color:  #53586c;
-	background: radial-gradient(circle, rgba(20, 48, 187, 0.699) 5%, rgba(36, 39, 54, 0.5) 18%, rgba(132,129,156,0) 23%, rgba(70, 76, 98, 0.201) 24%, rgba(132,129,156,0) 30%);
+	/* color:  #53586c; */
+	color:  #f9f9f9;
+	/* background: radial-gradient(circle, rgba(20, 48, 187, 0.699) 5%, rgba(36, 39, 54, 0.5) 18%, rgba(132,129,156,0) 23%, rgba(70, 76, 98, 0.201) 24%, rgba(132,129,156,0) 30%); */
 	animation: button_activate .2s ease-in-out;
 }
 
 #workspaces button.urgent {
-	color: #194fff;	
-	background: radial-gradient(circle, rgba(25, 79, 255, 0.3) 20%, rgba(132,129,156,0) 30%);
+	/* color: #194fff;	 */
+	color: #f9f9f9;
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.699) 5%, rgba(255, 255, 255, 0.5) 10%, rgba(255, 255, 255, 0) 16%, rgba(255, 255, 255, 0.5) 22%, rgba(255, 255, 255, 0) 26%);
+	/* background: radial-gradient(circle, rgba(252, 252, 255, 0) 15%, rgba(132,129,156,0) 30%); */
 }
 
 #workspaces button.persistent {
-	color: rgba(128, 142, 194, 0.3);
+	color: rgba(170, 176, 197, 0.3);
 }
 
 #workspaces button:hover {
@@ -64,7 +77,7 @@ tooltip label {
 }
 
 #workspaces button.active:hover, #workspaces button.urgent:hover {
-	background: inherit;
+	background: radial-gradient(circle, rgba(25, 79, 255, 0.1) 20%, rgba(132,129,156,0) 30%);
 }
 
 /* Indicators */
@@ -73,7 +86,8 @@ tooltip label {
 	/* color: #f7f7f9; */
 	font-weight: bold;
 	/* color: rgba(128, 142, 194, 0.8); */
-	color: #79829d;
+	/* color: #53586c; */
+	color: #ececf1;
 	background-color: transparent;
 }
 

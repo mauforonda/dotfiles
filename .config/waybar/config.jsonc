@@ -1,6 +1,8 @@
 {
 	"layer": "top",
-	"position": "top",
+	"position": "bottom",
+	"margin-bottom": 5,
+	"margin-top": 0,
 	"modules-center": ["wlr/workspaces"],
 	"modules-right": ["clock", "network", "battery"],
 
@@ -17,13 +19,6 @@
 			"5": "",
 			"active": "",
 			"urgent": ""
-		},
-		"persistent_workspaces": {
-			"1": [],
-			"2": [],
-			"3": [],
-			"4": [],
-			"5": []
 		}
 	},
 	
