@@ -1,9 +1,12 @@
 {
 	"layer": "top",
 	"position": "bottom",
-	"margin-bottom": 5,
-	"margin-top": 0,
-	"modules-center": ["wlr/workspaces"],
+	"height": 5,
+	"margin-bottom": 3,
+	"margin-top": -5,
+	// "exclusive": false,
+	// "mode": "overlay",
+	"modules-center": ["hyprland/workspaces"],
 	"modules-right": ["clock", "network", "battery"],
 
 	"wlr/workspaces": {
@@ -11,14 +14,14 @@
 		"on-click": "activate",
 		"format": "{icon}",
 		"format-icons": {
-			"default": "",
-			"1": "",
-			"2": "",
-			"3": "",
-			"4": "",
-			"5": "",
-			"active": "",
-			"urgent": ""
+			"default": "",
+			"1": "",
+			"2": "",
+			"3": "",
+			"4": "",
+			"5": "",
+			"active": "",
+			"urgent": ""
 		}
 	},
 	

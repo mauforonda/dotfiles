@@ -3,21 +3,25 @@
 	offset = 30x10
 	scale = 1
 	corner_radius = 10
-	icon_corner_radius = 10
+	icon_corner_radius = 5
 	transparency = 0
 	padding = 10
 	text_icon_padding = 10
+	max_icon_size = 12
 	frame_width = 2
-	width = (0, 300)
+	width = (50, 300)
+	show_age_threshold = -1
 	
 	frame_color = "#ffffff"
 	background = "#ffffff"
 	foreground = "#484b64"	
 
+	icon_position = left
+
 	gap_size = 5
 	font = Inter 9
 	line_height = 3
-	format = "%a\n<b>%s</b>\n%b"
+	format = "<b>%s</b>"
 	alignment = left
 	vertical_alignment = center
 	

@@ -1,3 +1,5 @@
-![Screenshot on June 6, 2023](workspace.png)
+![Light screenshot on October 22, 2023](workspace_light.png)
 
-*June 6, 2023*
+![Dark screenshot on October 22, 2023](workspace_dark.png)
+
+*October 22, 2023*

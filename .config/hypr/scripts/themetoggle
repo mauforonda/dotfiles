@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+GTKDARK="Catppuccin-Macchiato-Standard-Lavender-dark"
+GTKLIGHT="Catppuccin-Latte-Standard-Lavender-light"
+
+KITTYLIGHT="latte.conf"
+KITTYDARK="macchiato.conf"
+
+WALLLIGHT="light.png"
+WALLDARK="dark.png"
+
+FISHLIGHT="Latte"
+FISHDARK="Macchiato"
+
+OBSIDIANLIGHT="moonstone"
+OBSIDIANDARK="obsidian"
+OBSIDIAN_NOTEBOOK="$HOME/studio/notebooks/3"
+
+if [[ "$#" -ne 1 ]]; then
+	CURRENT=$(gsettings get org.gnome.desktop.interface color-scheme)
+	if [[ $CURRENT == "'prefer-dark'" ]]; then
+		APPLY="light"
+	else
+		APPLY="dark"
+	fi
+else
+	APPLY="$1"
+fi
+
+if [[ $APPLY == "light" ]]; then
+	gsettings set org.gnome.desktop.interface color-scheme prefer-light
+	gsettings set org.gnome.desktop.interface gtk-theme "$GTKLIGHT"
+	sed -i "s/$KITTYDARK/$KITTYLIGHT/" "$HOME/.config/kitty/kitty.conf"
+#	sed -i "s/$OBSIDIANDARK/$OBSIDIANLIGHT/" "$OBSIDIAN_NOTEBOOK/.obsidian/appearance.json"
+	fish -c "echo y | fish_config theme save $FISHLIGHT"
+	hyprctl hyprpaper wallpaper "eDP-1,$HOME/.config/hypr/wall/$WALLLIGHT"
+else
+	gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+ 	gsettings set org.gnome.desktop.interface gtk-theme "$GTKDARK"
+	sed -i "s/$KITTYLIGHT/$KITTYDARK/" "$HOME/.config/kitty/kitty.conf"
+#	sed -i "s/$OBSIDIANLIGHT/$OBSIDIANDARK/" "$OBSIDIAN_NOTEBOOK/.obsidian/appearance.json"
+	fish -c "echo y | fish_config theme save $FISHDARK"
+	hyprctl hyprpaper wallpaper "eDP-1,$HOME/.config/hypr/wall/$WALLDARK"
+fi

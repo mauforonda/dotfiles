@@ -29,5 +29,5 @@ ACTION=$(dunstify \
     -r "$notification_id")
 
 if [[ $ACTION == 'open_action' ]]; then
-    chromium $shot_path
+    xdg-open $shot_path
 fi

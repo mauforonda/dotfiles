@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# Clip the primary selection to the last modified note inside a directory
+# For note taking in obsidian 
+
+notebook="$HOME/studio/notebooks/2/workflow"
+template="""
+> $(wl-paste -pn | sed -z 's/\n/\n> /g')
+"""
+last_modified=$(find "$notebook" -type f -printf "%T@ %p\n"| sort -nr | head -n 1 | cut --complement -d' ' -f1)
+
+echo "$template" >> "$last_modified"

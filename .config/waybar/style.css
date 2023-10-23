@@ -6,7 +6,7 @@
 }
 
 window#waybar {
-	background-color: transparent;
+	background: transparent;
 }
 
 /* Tooltips */
@@ -29,6 +29,7 @@ tooltip label {
 	/* color: #f9f9f9; */
 	font-weight: bold;
 	padding: 0px 5px;
+	min-height: 0;
 }
 
 /* Buttons */
@@ -39,32 +40,35 @@ tooltip label {
 }
 
 #workspaces {
-	background: rgba(219, 219, 219, .5);
-	padding: 0px 5px;
+	background: rgba(219, 219, 219, .25);
 	border-radius: 25px;
+	margin-bottom: 3px;
+    padding: 4px 2px;
 }
 
 #workspaces button {
-	border: none;
-	/* color:  #79829d; */
-	color:  #ececf1;
-	padding: 3px;
-	background: transparent;
-	box-shadow: none;
+	color: #727482;
+	min-height: 3px;
+	min-width: 15px;
+	padding: 0px;
+    margin: 0px 3px;
+    border-radius: 25px;
+    background-color: #f9f9f9;
+	opacity: .35;
+    transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.active {
-	/* color:  #53586c; */
-	color:  #f9f9f9;
-	/* background: radial-gradient(circle, rgba(20, 48, 187, 0.699) 5%, rgba(36, 39, 54, 0.5) 18%, rgba(132,129,156,0) 23%, rgba(70, 76, 98, 0.201) 24%, rgba(132,129,156,0) 30%); */
-	animation: button_activate .2s ease-in-out;
+	color: #f9f9f9;
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    min-width: 35px;
+    transition: all 0.3s ease-in-out;
+	opacity: 1.;
 }
 
 #workspaces button.urgent {
-	/* color: #194fff;	 */
-	color: #f9f9f9;
-	background: radial-gradient(circle, rgba(255, 255, 255, 0.699) 5%, rgba(255, 255, 255, 0.5) 10%, rgba(255, 255, 255, 0) 16%, rgba(255, 255, 255, 0.5) 22%, rgba(255, 255, 255, 0) 26%);
-	/* background: radial-gradient(circle, rgba(252, 252, 255, 0) 15%, rgba(132,129,156,0) 30%); */
+	opacity: 1.;
 }
 
 #workspaces button.persistent {
@@ -72,12 +76,7 @@ tooltip label {
 }
 
 #workspaces button:hover {
-	border: none;
-	background: radial-gradient(circle, rgba(25, 79, 255, 0.1) 20%, rgba(132,129,156,0) 30%);
-}
-
-#workspaces button.active:hover, #workspaces button.urgent:hover {
-	background: radial-gradient(circle, rgba(25, 79, 255, 0.1) 20%, rgba(132,129,156,0) 30%);
+	opacity: 1.;
 }
 
 /* Indicators */
@@ -88,7 +87,7 @@ tooltip label {
 	/* color: rgba(128, 142, 194, 0.8); */
 	/* color: #53586c; */
 	color: #ececf1;
-	background-color: transparent;
+	background: transparent;
 }
 
 #clock {
@@ -107,7 +106,7 @@ tooltip label {
 }
 
 #battery.warning {
-	color: #194fff;
+	color: #ffffff;
 }
 
 #battery.critical {

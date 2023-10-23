@@ -5,8 +5,9 @@ font-variations = "wght 500"
 horizontal = true
 anchor = bottom-left
 margin-left = 0
+margin-bottom = 0
 width = 30%
-height = 39
+height = 30
 
 outline-width = 0
 border-width = 0
@@ -15,7 +16,7 @@ result-spacing = 25
 
 hide-input = true
 
-padding-top = 10
+padding-top = 5
 padding-bottom = 0
 padding-left = 0
 padding-right = 0
@@ -25,14 +26,14 @@ prompt-padding = 0
 background-color = #D0D0D200
 text-color = #ececf1
 
-default-result-background = #A6ACB6
-default-result-background-padding = 5, 10
-default-result-background-corner-radius = 12
+default-result-background = #A6ACB633
+default-result-background-padding = 3, 6
+default-result-background-corner-radius = 10
 
 selection-color = #53586c
 selection-background = #dbdbdb
-selection-background-padding = 5, 10
-selection-background-corner-radius = 12
+selection-background-padding = 3, 6
+selection-background-corner-radius = 10
 selection-match-color = #656d85
 
 clip-to-padding = false
